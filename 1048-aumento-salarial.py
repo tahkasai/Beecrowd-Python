@@ -1,2 +1,0 @@
-salario = float(input())
-

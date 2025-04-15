@@ -3,13 +3,13 @@ L = int(input()) # número da linha
 # criação da matriz
 matriz = []
 
-if (0<=L and L<=2):
+if (0<=L and L<=11):
     T = input() # tipo da operação
 
     for i in range(12):
         linha = []
         for j in range(12):
-            numero = int(input())
+            numero = float(input())
             linha.append(numero)
         matriz.append(linha)
 
@@ -17,12 +17,9 @@ if (0<=L and L<=2):
     resultado = 0
 
     # Operação
-    if T == "S":
-        for k in range(len(matriz)):
+    for k in range(len(matriz)):
             resultado += matriz[L][k]
-    elif T == "M":
-        for k in range(len(matriz)):
-            resultado += matriz[L][k]
+    if T == "M":
         resultado /= 12
 
 # exibir
